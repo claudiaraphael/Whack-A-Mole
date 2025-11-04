@@ -6,19 +6,66 @@
     <title>Game</title>
 </head>
 <body>
-
-    
-    <div>
-        <table>
-            <tr><th colspan='2'>Pontuação</th></tr> 
-            <tr><td>Acertos</td></tr> 
-            <tr><td>Perdidos</td></tr>
-            <tr><td>Errados</td></tr>
-            <tr><td>Saldo</td></tr>
-            <tr><td colspan='2'>Start</td></tr>
-        </table>
-    </div>
-
-
+    <header>
+        <div class="previousPage">
+            <a href="regras.html" class="circulo">
+                <img src="images/arrow-up.png" alt="seta para cima" class="arrow">
+            </a>
+        </div>
+    </header>
+    <section class="tabuleiro" id="tabuleiro">
+        <div class="gramado" id="idGranado">
+            <img src="images/hole.png" alt="buraco vazio" class="hole" id="buraco0">
+            <img src="images/hole.png" alt="buraco vazio" class="hole" id="buraco1">
+            <img src="images/hole.png" alt="buraco vazio" class="hole" id="buraco2">
+            <img src="images/hole.png" alt="buraco vazio" class="hole" id="buraco3">
+            <img src="images/hole.png" alt="buraco vazio" class="hole" id="buraco4">
+        </div>
+        <div class="pontos">
+            <table>
+                <thead>
+                    <tr><th colspan='2'>Pontuação</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Acertos: </td>
+                        <td class="pontuacao" id="acertos">
+                            <img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0">
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td>Perdidos</td>
+                        <td class="pontuacao" id="acertos">
+                            <img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Errados</td>
+                        <td class="pontuacao" id="acertos">
+                            <img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Saldo</td>
+                        <td class="pontuacao" id="acertos">
+                            <img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>
+                        <button id="start" class="btn btn-light">Start</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <div class="nextPage">
+            <a href="recordes.html" class="circulo">
+                <img src="images/arrow-down.png" alt="seta para baixo" class="arrow">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
