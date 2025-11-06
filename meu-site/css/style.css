@@ -1,3 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /* Remove qualquer margem padrão que possa estar no header */
+    margin: 0; 
+    /* Garante que o header não tenha altura no fluxo normal do documento */
+    height: 0;
+    /* Opção alternativa se o height: 0 não funcionar */
+    /* display: none; */ 
+}
+
 body {
     margin: 0px;
     border: 0px;
@@ -50,8 +64,24 @@ body {
     background-color: cornsilk;  
 }
 
-.regras content-box {
+.regras .contentBox {
     width: 100%;
     padding: 50px;
     background-color: antiquewhite;
+}
+
+
+.regras .imgBox {
+    width: 100%;
+    background: url(../images/Mole.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.previousPage {
+    position: fixed;
+    top: 10px; 
+    left: 10px;
+    z-index: 3;
 }
