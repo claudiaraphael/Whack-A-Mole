@@ -18,3 +18,40 @@ body {
     object-fit: cover; /* cobre todo o espaço disponivel e faz cortes se necessario */
     display: block;
 }
+
+.nextPage {
+    position: fixed; /* elemento fica fixo na posicao mesmo q a pagina se mova */
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center; /* ALINHA O CONTEUDO NA VERTICAL */
+    justify-content: center; /* ALINHA O CONTEUDO NA HORIZONTAL */
+    z-index: 3;
+}
+
+.circulo {
+    background-color: darkgrey;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
+}
+
+.regras {
+    height: 100vh;
+    display: flex;
+    background-color: cornsilk;  
+}
+
+.regras content-box {
+    width: 100%;
+    padding: 50px;
+    background-color: antiquewhite;
+}
