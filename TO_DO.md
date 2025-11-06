@@ -5,4 +5,4 @@
 ## Tarefas:
 
 - Baixar conteúdo das imagens do github -> aguardando retorno do prof. - check
-- Estilizar paginas html
+- Estilizar paginas html 

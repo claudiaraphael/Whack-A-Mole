@@ -1,3 +1,5 @@
+/* HOME */
+
 * {
     margin: 0;
     padding: 0;
@@ -58,10 +60,13 @@ body {
     height: 24px;
 }
 
+/* REGRAS */
+
 .regras {
     height: 100vh;
     display: flex;
-    background-color: cornsilk;  
+    background-color: cornsilk;
+    font-family: "Mulish", sans-serif;  
 }
 
 .regras .contentBox {
@@ -77,6 +82,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
 }
 
 .previousPage {
@@ -84,4 +90,45 @@ body {
     top: 10px; 
     left: 10px;
     z-index: 3;
+}
+
+/* TABULEIRO */
+
+.tabuleiro {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00FF00;
+}
+
+.gramado {
+    width: 536px;
+    height: 536px;
+    background-color: #008000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* space-around significa que o conteudo esta distribuido uniformemente no eixo horizontal (principal)  */
+    flex-wrap: wrap; /* permite quebra de linha */
+    cursor: url(../images/hammer.png), crosshair;
+    padding: 0px;
+}
+
+.gramado img {
+    padding: 25px 50px 25px 50px;
+    box-sizing: content-box; /* Incluido por causa do bootstrap */
+    width:76px;
+    height: 61px;
+}
+
+.pontos {
+    width:536px;
+    height: 536px;
+    display: flex;
+    justify-content: center;
+    font-family: "Sixtyfour", sans-serif;
+}
+
+.pontos th {
+    
 }
