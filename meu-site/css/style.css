@@ -130,5 +130,13 @@ body {
 }
 
 .pontos th {
-    
+    font-size: 50px;
+    text-align: center;
 }
+
+.pontos td:first-child {
+    text-align: center;
+    font-size: 36px;
+    font-family: "Sixtyfour", sans-serif;
+}
+
