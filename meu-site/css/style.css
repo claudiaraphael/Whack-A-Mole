@@ -66,7 +66,7 @@ body {
     height: 100vh;
     display: flex;
     background-color: cornsilk;
-    font-family: "Mulish", sans-serif;  
+    font-family: "Mulish", sans-serif;
 }
 
 .regras .contentBox {
@@ -155,3 +155,138 @@ body {
 
 /* RECORDES */
 
+.records {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8be78b;
+    font-family: 'Mulish';
+    font-size: 26px;
+
+}
+
+.heading {
+    font-family: 'MedievalSharp', cursive;
+    color: blueviolet;
+    text-align: center;
+}
+
+.records tr:nth-child(even) {
+    background-color: bisque;
+}
+
+.records th {
+    color: antiquewhite;
+    background-color: #000000;
+    text-align: center;
+    font-size: 36px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.records td {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 30px;
+}
+
+.records td:first-child, td:nth-child(3) { /* seleciona a 1a e a 3a colunas */
+    text-align: right;
+}
+
+.records td:nth-child(4) {
+    text-align: center;
+}
+
+.records table {
+    border-collapse: collapse;
+    font-family: 'MedievalSharp', cursive;
+    background-color: rgb(178, 237, 237);
+}
+
+/* MEDIA QUERIES */
+/* considera-se uma tela pequena qd a resolucao da largura ficar abaixo de 991px*/
+
+@media(max-width: 991px) {
+    /* REGRAS */
+    .regras {
+        flex-direction: column;
+    }
+
+    .regras .imgBox {
+        height: 100%;
+    }
+
+    /* TABULEIRO */
+
+    .tabuleiro {
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+
+    .pontos th {
+        font-size: 30px;
+    }
+
+    .pontos td:first-child {
+        font-size: 20px;
+    }
+
+    .gramado {
+        width: 400px;
+        height: 400px;
+    }
+
+    .pontos {
+        width: 400px;
+        height: 400px;
+    }
+
+    .pontos {
+        width: 400px;
+        height: 400px;
+    }
+
+    gramado img {
+        padding:  10px 30px 10px 30px;
+    }
+
+    /* RECORDES */
+
+    .records tr th {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .records th {
+        font-size: 18px;
+    }
+
+    .records td {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 15px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
