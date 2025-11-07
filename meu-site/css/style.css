@@ -140,3 +140,18 @@ body {
     font-family: "Sixtyfour", sans-serif;
 }
 
+#start {
+    width: 100%;
+    font-size: 36px;
+    border: 20px solid #000000;
+    border-radius: 2.5rem;
+}
+
+#start:hover {
+    background-color: rgb(159, 246, 217);
+    color: yellow;
+    border: 20px solid rgb(236, 158, 158);
+}
+
+/* RECORDES */
+
