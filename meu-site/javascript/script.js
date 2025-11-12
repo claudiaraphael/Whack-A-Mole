@@ -61,7 +61,7 @@ function start () {
     let botaoStart = document.getElementById('start');
 
     botaoStart.removeEventListener('click', start); // remover o evento do botão Start para que o usuário não possa inicializar o jogo várias vezes;
-    botaoStart.disable = true;
+    botaoStart.disabled = true;
     sobeToupeira();
 }
 
@@ -142,8 +142,8 @@ function mostraPontuacao() {
 function mostraPontuacaoDe(display, valor) {
     // pega as imagens
     let objCentena = document.getElementById(display).firstChild;
-    let objDezena = centena.nextSibling;
-    let objUnidade = dezena.nextSibling;
+    let objDezena = objCentena.nextSibling;
+    let objUnidade = objDezena.nextSibling;
 
     // calcula o valor de cada algarismo
     let centena = parseInt(valor / 100);
