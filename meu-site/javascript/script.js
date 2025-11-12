@@ -2,11 +2,11 @@
 // armazenam valores para serem usados por todo o programa
 // e compartilhados por varias funcoes
 
-const acertos = 0; // quantidade de acertos do jogador
-const perdidos = 0; // quantidade de toupeiras que o jogador deixou passar
-const errados = 0; // quantidade de marteladas dadas fora das toupeiras
-const intervalo = 5000; // Intervalo entre o aparecimento das toupeiras (valor inicial igual a 5000, indicando um intervalo de 5000 milissegundos, ou seja, 5 segundos entre os aparecimentos das toupeiras).
-const janela = 2000; // Janela de tempo que o jogador tem para acertar na toupeira (valor inicial de 2000, indicando 2000 milissegundos, ou 2 segundos, que será o tempo que a toupeira ficará fora do buraco).
+let acertos = 0; // quantidade de acertos do jogador
+let perdidos = 0; // quantidade de toupeiras que o jogador deixou passar
+let errados = 0; // quantidade de marteladas dadas fora das toupeiras
+let intervalo = 5000; // Intervalo entre o aparecimento das toupeiras (valor inicial igual a 5000, indicando um intervalo de 5000 milissegundos, ou seja, 5 segundos entre os aparecimentos das toupeiras).
+let janela = 2000; // Janela de tempo que o jogador tem para acertar na toupeira (valor inicial de 2000, indicando 2000 milissegundos, ou 2 segundos, que será o tempo que a toupeira ficará fora do buraco).
 let timer = null // timer que controla o tempo que a toupeira fica fora do buraco
 
 
@@ -70,6 +70,8 @@ A função que irá mostrar a toupeira em um buraco deve escolher aleatoriamente
 depois, a função deve ativar dois temporizadores (timers): um para remover a toupeira do buraco e o outro para subir a próxima toupeira.
 
 */
+
+
 
 function sobeToupeira() {
     let buraco = Math.floor(Math.random() * 5); // floor arredonda o numero escolhido no intervalo para baixo
