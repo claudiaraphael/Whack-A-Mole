@@ -77,3 +77,31 @@ function sobeToupeira() {
     setTimeout(sobeToupeira, intervalo);
 }
 
+/*
+
+Agenda a remoção da toupeira:
+
+setTimeout cria um temporizador que executa uma função após um tempo
+Após janela milissegundos (2000ms = 2 segundos), chama a função tiraToupeira
+Passa o número do buraco como parâmetro para a função tiraToupeira saber qual buraco limpar
+Armazena a referência do timer na variável timer (permitindo cancelá-lo se necessário)
+
+setTimeout(sobeToupeira, intervalo);
+Agenda o próximo aparecimento de toupeira:
+
+Após intervalo milissegundos (5000ms = 5 segundos), chama novamente a função sobeToupeira
+Isso cria um loop recursivo: a função se chama continuamente, fazendo toupeiras aparecerem indefinidamente
+
+*/
+
+/*
+
+Resumo do fluxo:
+
+Sorteia um buraco aleatório (0-4)
+Mostra a toupeira nesse buraco
+Agenda para esconder essa toupeira depois de 2 segundos
+Agenda para mostrar uma nova toupeira depois de 5 segundos
+O ciclo continua infinitamente!
+
+*/

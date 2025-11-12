@@ -99,7 +99,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #00FF00;
+    background-color: #7fc97f;
 }
 
 .gramado {
@@ -112,6 +112,7 @@ body {
     flex-wrap: wrap; /* permite quebra de linha */
     cursor: url(../images/hammer.png), crosshair;
     padding: 0px;
+    border-radius: 36px;
 }
 
 .gramado img {
@@ -148,9 +149,9 @@ body {
 }
 
 #start:hover {
-    background-color: rgb(159, 246, 217);
-    color: yellow;
-    border: 20px solid rgb(236, 158, 158);
+    background-color: rgb(10, 16, 14);
+    color: rgb(255, 0, 102);
+    border: 20px solid rgb(236, 22, 22);
 }
 
 /* RECORDES */
