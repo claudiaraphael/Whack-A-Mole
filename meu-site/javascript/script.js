@@ -43,4 +43,37 @@ onload = function () {
     document.getElementById('buraco2').addEventListener('click', martelada);
     document.getElementById('buraco3').addEventListener('click', martelada);
     document.getElementById('buraco4').addEventListener('click', martelada);
+} // associa a função anônima descrita logo a seguir ao evento load da janela.
+
+/*
+
+Em JavaScript, o objeto que representa a janela do navegador se chama window, e é o objeto default (padrão). Isso significa que não é necessário escrever o nome do objeto, ou seja, a linha 15 é equivalente a escrever:
+
+window.onload = function() {
+    ...
 }
+
+*/
+
+function start () {
+    let botaoStart = document.getElementById('start');
+
+    botaoStart.removeEventListener('click', start); // remover o evento do botão Start para que o usuário não possa inicializar o jogo várias vezes;
+    botaoStart.disable = true;
+    sobeToupeira();
+}
+
+/*
+A função que irá mostrar a toupeira em um buraco deve escolher aleatoriamente um dos cinco buracos e colocar a imagem do buraco com a toupeira no lugar da imagem do buraco sem a toupeira.
+depois, a função deve ativar dois temporizadores (timers): um para remover a toupeira do buraco e o outro para subir a próxima toupeira.
+
+*/
+
+function sobeToupeira() {
+    let buraco = Math.floor(Math.random() * 5); // floor arredonda o numero escolhido no intervalo para baixo
+    let objBuraco = document.getElementById('buraco' + buraco); // ele concatena o numero aleatorio obtido com a palavra buraco, formando o id dos buracos (buraco0, buraco1, buraco2, buraco3, buraco4). Armazena a referência desse elemento na variável objBuraco
+    objBuraco.src = 'images/hole-mole.png'; // altera o atributo src da imagem (tag img) pela imagem com a toupeira (hole-mole.png)
+    timer = setTimeout(tiraToupeira, janela, buraco);
+    setTimeout(sobeToupeira, intervalo);
+}
+
