@@ -7,6 +7,8 @@ const perdidos = 0; // quantidade de toupeiras que o jogador deixou passar
 const errados = 0; // quantidade de marteladas dadas fora das toupeiras
 const intervalo = 5000; // Intervalo entre o aparecimento das toupeiras (valor inicial igual a 5000, indicando um intervalo de 5000 milissegundos, ou seja, 5 segundos entre os aparecimentos das toupeiras).
 const janela = 2000; // Janela de tempo que o jogador tem para acertar na toupeira (valor inicial de 2000, indicando 2000 milissegundos, ou 2 segundos, que será o tempo que a toupeira ficará fora do buraco).
+let timer = null // timer que controla o tempo que a toupeira fica fora do buraco
+
 
 // EVENTOS
 /* 
@@ -105,3 +107,73 @@ Agenda para mostrar uma nova toupeira depois de 5 segundos
 O ciclo continua infinitamente!
 
 */
+
+function tiraToupeira(buraco) {
+    const objBuraco = document.getElementById('buraco' + buraco);
+    objBuraco.src='images/hole.png';
+    perdidos++; // perdidos = perdidos +1
+    mostraPontuacao();
+}
+
+/*
+
+A função mostraPontuacao exibe a pontuação do jogador chamando quatro vezes a função mostraPontuacaoDe, cada uma para um tipo de valor a ser exibido: marteladas certas, toupeiras que não foram acertadas, marteladas erradas e pontuação total. Como a pontuação total não deve ser mostrada com valores negativos, pois o display do placar não tem números negativos, então sempre será exibido o maior valor entre zero e a pontuação do usuário. Se a pontuação for menor do que zero, o valor exibido será zero.
+
+Veja que cada um dos quatro valores do display é composto 
+por três imagens colocadas dentro de uma célula de tabela.
+As imagens são filhas de células identificadas pelos 
+seguintes valores de seus respectivos atributos 
+id: acertos, perdidos, errados e saldo. 
+A centena é o primeiro filho, a dezena é o primeiro irmão
+do primeiro filho e a unidade é o primeiro irmão da dezena. 
+Você vai se lembrar disso quando implementarmos a função mostraPontuacaoDe?
+
+*/
+
+function mostraPontuacao() {
+    mostraPontuacaoDe('acertos', acertos);
+    mostraPontuacaoDe('perdidos', perdidos);
+    mostraPontuacaoDe('errados', errados);
+    mostraPontuacaoDe('saldo', Math.max(acertos - perdidos - errados, 0));
+}
+
+function mostraPontuacaoDe(display, valor) {
+    // pega as imagens
+    let objCentena = document.getElementById(display).firstChild;
+    let objDezena = centena.nextSibling;
+    let objUnidade = dezena.nextSibling;
+
+    // calcula o valor de cada algarismo
+    let centena = parseInt(valor / 100);
+    let dezena = parseInt((valor / 10) % 10);
+    let unidade = valor % 10;
+
+    // muda a img e o valor do atributo para o leitor de tela
+    objCentena.src = 'images/caractere_' + centena + '.gif';
+    objCentena.alt = centena;
+    objDezena.src = 'images/caractere_' + dezena + '.gif';
+    objDezena.alt = dezena;
+    objUnidade.src = 'images/caractere_' + unidade + '.gif';
+    objUnidade.alt = unidade; 
+}
+
+function marteloBaixo() {
+    document.getElementById('idGramado').style.cursor = 'url(images/hammerDown.png), default';
+}
+
+function marteloCima() {
+    document.getElementById('idGramado').style.cursor = 'url(images/hammer.png), default';
+}
+
+function martelada(evento) {
+    if (evento.target.src.includes('hole-mole')) {
+        // acertou
+        acertos ++;
+        evento.target.src = 'images/hole.png';
+        clearTimeout(timer);
+    }
+    else {
+        errados ++;
+    }
+    mostraPontuacao();
+}
